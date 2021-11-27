@@ -66,24 +66,30 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Blue Theme
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid royalblue; 
 }
 
 .footer-container,
 .main aside {
-    border-top: 20px solid #e44d26;
+       border-top: 20px solid royalblue; 
 }
 
 .header-container,
-.footer-container,
 .main aside {
-    background: #f16529;
+    background: midnightblue;
 }
 
+
+.footer-container{
+    background: midnightblue; 
+}
+.main lside {
+    background: midnightblue;
+}
 .title {
     color: white;
 }
@@ -108,7 +114,7 @@ nav a {
     font-weight: bold;
 
     color: white;
-    background: #e44d26;
+    background: #06041b;
 }
 
 nav a:hover,
@@ -137,6 +143,11 @@ nav a:hover {
     padding: 0px 5% 10px;
 }
 
+
+.main lside {
+    color: white;
+    padding: 0px 5% 10px;
+}
 .footer-container footer {
     color: white;
     padding: 20px 0;
@@ -180,9 +191,9 @@ nav a:hover {
 
     nav a {
         float: left;
-        width: 27%;
-        margin: 0 1.7%;
-        padding: 25px 2%;
+        width: 15%;
+        margin: 0 1.2%;
+        padding: 15px 2%;
         margin-bottom: 0;
     }
 
@@ -214,7 +225,7 @@ nav a:hover {
    ==================== */
 
     .header-container,
-    .main aside {
+    .main aside, lside {
         -webkit-box-shadow: 0 5px 10px #aaa;
            -moz-box-shadow: 0 5px 10px #aaa;
                 box-shadow: 0 5px 10px #aaa;
@@ -230,7 +241,7 @@ nav a:hover {
 
     nav {
         float: right;
-        width: 88%;
+        width: 98%;
     }
 
 /* ============
@@ -245,6 +256,16 @@ nav a:hover {
     .main aside {
         float: right;
         width: 28%;
+    }
+    .main lside {
+        float: left;
+        width: 15%;
+    }
+
+    .main rside {
+        float: right;
+        width: 68%;
+        background-color: rgb(239, 239, 243);
     }
 }
 
@@ -382,7 +403,7 @@ nav a:hover {
     padding-left: 30px;
     padding-right: 30px;
     border-color: black;
-    color :rgb(255, 0, 0)
+    color : royalblue; 
   }
  
   
@@ -411,7 +432,7 @@ nav a:hover {
   }
   
   .DNbutton:hover {
-    background-color: red;  
+    background-color: royalblue;  
     color: whitesmoke; 
   }
   
@@ -422,3 +443,69 @@ nav a:hover {
     height: 30%;
  }
 
+ #mapid { height: 740px; } 
+
+ /* Picture setting */
+ #picSetting{
+ display:flex;
+ padding :3px,200px;
+ justify-content: center;
+ align-items: center;
+  }
+
+
+  #picSetting::before{
+    content : "";
+    position:absolute;
+    background: url('/home-project-CM2104-master/prototype/Images/wallpaper-Hyundai-electric-car.jpg') no-repeat center center/cover;
+    height :90%;
+    width :100%;
+    z-index: -1;
+    opacity :0.89;
+     }
+
+     #picSetting1{
+        display:flex;
+        padding :3px,200px;
+        justify-content: center;
+        align-items: center;
+         }
+       
+     
+  #picSetting1::before{
+    content : "";
+    position:absolute;
+    background: url('/home-project-CM2104-master/prototype/Images/825860.jpg') no-repeat center center/cover;
+    height :90%;
+    width :100%;
+    z-index: -1;
+    opacity :0.89;
+     }
+
+     #shakey{
+        color: black;
+        background-color: rgb(245, 245, 245);
+     }
+
+     #CBtn{
+        color: black;
+        background-color: rgb(245, 245, 245);
+        
+        margin: 10px;
+        text-align: center;
+     }
+
+     #EBtn{
+        color: black;
+        background-color: rgb(245, 245, 245);
+            
+        
+        margin: 10px;
+        text-align: center;
+     }
+     
+
+     .Dbutton:hover {
+        background-color: royalblue;  
+        color: whitesmoke; 
+      }
