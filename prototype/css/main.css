@@ -90,9 +90,17 @@ body {
 .main lside {
     background: midnightblue;
 }
-.title {
+.EcoTitle {
     color: white;
+    text-align: center;
 }
+
+#ecologo {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+ }
+
 
 /* ==============
     MOBILE: Menu
@@ -124,6 +132,7 @@ nav a:visited {
 
 nav a:hover {
     text-decoration: underline;
+    color: royalblue; 
 }
 
 /* ==============
@@ -191,7 +200,7 @@ nav a:hover {
 
     nav a {
         float: left;
-        width: 15%;
+        width: 12%;
         margin: 0 1.2%;
         padding: 15px 2%;
         margin-bottom: 0;
@@ -396,6 +405,82 @@ nav a:hover {
 
 /* Darsh's CSS starts here */
 
+/* Style all font awesome icons */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 15px;
+      border-radius: 50%;
+  }
+  
+  /* Add a hover effect if you want */
+  .fa:hover {
+    opacity: 0.27;
+  }
+  
+  /* Set a specific color for each brand */
+  
+  /* Facebook */
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Twitter */
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  /* Instagram */
+  .fa-instagram {
+    background: #3B5998;
+    color: white;
+  }
+  
+  /* Linkedin */ 
+  .fa-linkedin {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
+  .Footerbutton {
+    border: none;
+    color: whitesmoke;
+    background-color: royalblue;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2vh;
+    margin: 3px 85px;
+    transition-duration: 0.5s; 
+    cursor: pointer;
+  }
+  
+  .Footerbutton:hover {
+    background-color: black;  
+    color: whitesmoke; 
+  }
+  
+  
+
 #DNLogin {
     border: solid 3px black;
     border-radius: 20px;
@@ -424,7 +509,7 @@ nav a:hover {
     text-decoration: none;
     display: inline-block;
     font-family: 'Bebas Neue', 'Serif';
-    font-size: 3vh;
+    font-size: 2vh;
     font-weight: bold;
     margin: 3px 2px;
     transition-duration: 0.5s; 
@@ -509,3 +594,5 @@ nav a:hover {
         background-color: royalblue;  
         color: whitesmoke; 
       }
+
+      /* Darsh's CSS Ends here */
