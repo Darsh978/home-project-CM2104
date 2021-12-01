@@ -55,7 +55,6 @@ var map = L.map('mapid').setView([0, 0], 1);
 $('#EBtn').click(function() {
     console.log("getting carbon intensity data");
     //use the jquery get json method to retrieve our json
-    //http://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/EC3A+7BR/limit/10/
      //https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
 
 
@@ -76,31 +75,6 @@ $('#EBtn').click(function() {
          console.log(index)
         
         
-        //result.data.data.generationmix.forEach(function(fuel) {
-          //for each earthquake
-          //get its coordinates
-         // var lng = quake.geometry.coordinates[0];
-         // var lat = quake.geometry.coordinates[1];
-
-          //var lng = quake.ChargeDeiceLocation.longitude[0];
-          //var lat = quake.ChargeDeiceLocation.Latitude[1];
-          //and it magnitude
-         
-
-        
-         
-         //for each earthquake create a circle
-           // var circle = L.circle([lat, lng],mag*50, {
-            //    color: 'blue',
-            //    opacity:0,
-            //    fillColor: 'blue', 
-            //    fillOpacity: 0.8,
-            //    //radius: mag
-           // })
-            //and add it to the map
-           // circle.addTo(map);
-           // L.marker([lat, lng]).addTo(map); 
-        //});
 
     });
 });
@@ -111,11 +85,8 @@ $('#CBtn').click(function() {
     console.log("Getting Charging points")
     //use the jquery get json method to retrieve our json
     //https://cors-anywhere.herokuapp.com/http://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/EC3A+7BR/limit/10/
-     //https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson
-
 
      //https://cors-anywhere.herokuapp.com/http://
-     //https://api.carbonintensity.org.uk/regional/scotland
 
     $.getJSON("https://cors-anywhere.herokuapp.com/http://chargepoints.dft.gov.uk/api/retrieve/registry/postcode/AB15/limit/10/format/json/", function(result) {
         //response data is now in the result variable
