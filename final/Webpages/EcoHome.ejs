@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eco-Mession</title>
+    <%- include('./partial/head') %>
+    
+  </head>
+  <header>  
+    <%- include('./partial/header') %>
+  </header>
+  <body>
+    <main>
+
+      <!--Breadcrumbs to help navigate to previous page-->
+      <div class="breadcrumb">
+       <a href="/">Home</a>
+      </div>
+      <div class = "MainBody">
+        <section class="EVBenefits">
+            <h1 class="EVtitle">Electric Vehicle Benefits</h1>
+            <h3 class="EVHeader">Choosing an electric car can help you save money and reduce your carbon footprint.</h3>
+               <br><br>
+              <p>Our guide will tell you more about the different types of vehicle available and how you can save money on purchasing an electric car.
+                Electric vehicles are an increasingly attractive option, due to their lower running costs, the expanding choice of models available and intensifying concerns about air quality and climate change
+                Learn more about the types of electric vehicles, their benefits and what financial support is available to help buy one.
+                While the initial upfront purchase price of an electric or plug-in hybrid vehicle can be higher, this is usually offset by lower running costs.
+               <br>
+               <span id = "expand">
+                Electric vehicles offer savings including:
+                
+               <li>A full charge in a pure electric vehicle will give a typical range of over 100 miles and will cost approximately £4-6 if charging at home, and £8-10 if using public charging points. Driving 100 miles in a petrol or diesel car will cost around £13-16 in fuel, which can be three or four times more than the cost of charging the electric car.</li>
+               <li>The cost savings will be most significant when owners charge at home and have access to an off-peak overnight electricity tariff.</li>  
+               <li>There are fewer mechanical components in an electric vehicle compared with conventional vehicles, which often results in lower servicing and maintenance costs.</li>
+               <li>Pure EVs have a zero rate of vehicle excise duty.</li>
+               <li>From 25 October 2021, only zero emission vehicles – those emitting 0g/km CO2 – qualify for the cleaner vehicle discount. All other vehicles, regardless of their emissions status will be required to pay the Congestion Charge.</li>
+               <li>The lower or zero emissions of plug-in vehicles mean that they will attract lower charges from clean air zones being implemented around the UK and London’s ultra low emission zone (ULEZ).</li>
+               <li>Free parking for electric vehicles is available in some towns and cities.</li>
+               </span>  
+              </p>
+        </section>
+        <section class="timelineContainer">
+          <h1 class="timelineBanner">A Brief History of the Electric Car</h1>
+          <p class=timelineParagraph>
+              Electric vehicles will become a major contributor in reducing emissions created from transport, they play an important part in helping UK reaching its net zero goals.
+              In recent years, electric vehicles have been growing in popularity, and this growth is set to continue, greatly aided by the future ban on the sale of new diesel and petrol cars in the UK, this ban will be enforced in 2030.
+              The common view is that electric cars are a new invention, however the first electric vehicles were being made in the early 19th century. This timeline below shows a history of electric vehicles.
+              <br><br>
+              <b>1830s</b>
+              <br>
+              As we know the primary mode of transport back then was by horse and cart. However, in the Netherlands, Hungary, the UK and the UK, innovators were starting to test the idea of a battery-powered vehicle, this created the first small-scale electric cars.
+              <br><br>
+              <b>1859</b>
+              <br>
+              Gaston Plante, a French physicist invented the first lead-acid battery, giving us a feasible way of storing electricity on board a vehicle. Later in 1881, French chemical engineer Camille Alphonse Faure improved upon Plante's design and increased the capacity of the battery.
+              <br><br>
+              <b>1884</b>
+              <br>
+              Wolverhampton become the birth place of the first production electric car, this was made by English inventor Thomas Parker.
+              <br><br>
+              <b>1890</b>
+              <br>
+              William Morrison, an America chemist made America’s first successful electric car. The car could fit 6 passengers and had a measly top speed of 14mph, but his product created interest in electric cars across the USA.
+              <br>
+              <img class="timelineImage" src="Pics/timelineCar2.jpeg"/>
+              <br>
+              <span id="hide"></span><span id="expand2"><b>1900</b>
+              <br>
+              By this time, electric cars accounted for 1/3 of all the vehicles travelling on US roads.
+              <br><br>
+              <b>1901</b>
+              <br>
+              Porsche founder, Ferdinand Porsche invented the first hybrid electric car. It was powered a gas engine and an electric battery.
+              <br><br>
+              <b>1914</b>
+              <br>
+              The Model T car by Ford affected the sale of electric vehicles, this was when gas powered cars were becoming affordable and more widely available. 
+              <br><br>
+              <b>1920-1935</b>
+              <br> 
+              The use of electric cars was banned in cities because of their slow speed and low range, and by 1935 they had virtually disappeared.
+              <br><br>
+              <b>1971</b>
+              <br>
+              NASAs electric powered Lunar Rover became the first manned vehicle to drive on the moon.
+              <br><br>
+              <b>1991</b>
+              <br>
+              Sony and Asahi Kasei commercialised the lithium-ion battery which meant electric vehicles could travel longer distances on a single charge.
+              <br><br>
+              <b>2010</b>
+              <br>
+              The Nissan Leaf became the first modern pure electric family hatchback car to be produced for mass market. The car had zero carbon emissions.
+              <br><br>
+              <b>2016</b>
+              <br>
+              One million pure electric cars had been sold worldwide.
+              <br><br>
+              <b>2020</b>
+              <br>
+              Tesla became the first company to make one million electric cars.
+              <br><br>
+              <b>2021</b>
+              <br>
+              500,000 ultra low emission cars are being driven on roads across the UK. The UK hopes to end the sale of new diesel and petrol cars by 2030.
+              </span>
+              <button onclick="HiddenParagraphs()" id="RdBtn">Continue Reading..</button>
+            </p>
+          
+        </section>
+        <aside>
+          <h1>Co2 Intensity Scotland</h1>
+          <div id="CO2">
+
+          </div>
+          <h1>Latest EV Tweets</h1>
+          <div id ='twitDisplay'>
+          </div>
+        
+        </aside>
+    </div>
+    </main>
+     <script src="js/EcoScript.js"></script>
+  </body>
+ 
+  <footer class= "footer">
+    <%- include('./partial/footer') %>
+  </footer>   
+</html>       

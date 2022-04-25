@@ -1,0 +1,692 @@
+
+*{box-sizing: border-box;
+    margin:0;
+}
+
+html{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    height: 100vh;
+    position: relative;
+    bottom: 0;
+    margin: 0;
+}
+
+/*---Start of header and navbar design---*/
+header{
+    width: 100%;
+    background-color: black; 
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list .list-item {
+    display: inline-block;
+    padding: 20px 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: red;
+}
+
+.menu {
+    display: none; 
+}
+
+.menu-line {
+    width: 20px;
+    height: 3px;
+    background-color: white;
+    margin-bottom: 4px;
+}
+
+.primary-icon {
+    height: 100px;
+}
+
+.dropdown {
+    display: inline;
+    
+}
+
+
+@media all and (max-width: 880px /*change to 480 px*/) {
+    .navbar {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .navbar .container-icon {
+        width: 100%;
+    }
+    .menu {
+        display: block;
+        position: absolute;
+        right: 15px;
+        top: 15px;
+    }
+
+    .nav-list {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+        display: none;
+    }
+
+    .nav-list .list-item { 
+        display: block;
+        border-top: 1px solid white;
+    }
+
+    .primary-icon {
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .active {
+        display: block;
+    }
+
+    .dropdown {
+        display: none;
+    }
+}
+
+
+
+
+@media all and (min-width: 880px /*change to 480 px*/) {
+    .bigScreenNavbar {
+        display: none;
+    }
+    
+
+}/*---End of header and navbar design---*/
+
+/*---Start of Body design---*/
+
+main, .MainBody{
+    display: block;
+    position: relative;
+    margin-left: 1%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+.breadcrumb{
+    display: block;
+    position: absolute;
+    font-size: 18px;
+    
+}
+.breadcrumb a{
+    text-decoration: none;
+    color: black;
+}
+.breadcrumb a:hover{
+    color: #333;
+}
+.slides{
+    height: 400px;
+    display: none;
+    width:100%;
+    object-fit:fill;
+    object-position:50% 50%;
+}
+/*---Fatima's Body CSS---*/ 
+.EVBenefits{
+    padding: 20px;
+    margin-top: 50px;
+    border:1px solid #575757;
+    width: 60%;
+    float: left;
+    border-radius: 10px;
+}
+.wrapper{
+    margin-bottom: 69px;
+    padding: 0 1rem;
+    padding-top: 92px;
+}
+.news{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 2rem;
+
+} 
+.timelineContainer {
+    overflow: hidden;
+    float: left;
+    margin-top: 5%;
+    width: 60%;
+    height: 50%;
+    border: 1px solid #575757;
+    border-radius: 10px;
+}
+
+.timelineBanner {
+    text-align: center;
+    margin: 10px;
+    background: #53a3ee;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.timelineParagraph {
+    margin: 30px;
+    text-align: left;
+}
+.timelineImage {
+    justify-content: center;
+    margin: 5%;
+    width: 70%;
+    height: 40%;
+}
+#RdBtn{
+    opacity:2;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    background-color:#bbbbbb;
+}
+/*---End Fatima's Body CSS---*/
+
+/*---Neil's Body CSS---*/
+#textBoxAbout {
+    display: block;
+    overflow: hidden;
+    margin-left: 1%;
+    text-align: justify;
+    width: 35%;
+    height: 40%;
+    border: 2px solid black;
+    background: white;
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 50%;
+    position: relative;
+    /*white-space: normal;*/
+}
+  
+#aboutMainImageID {
+     width: 35%;
+     height: 50%;
+     margin-left: 30%;
+     margin-top: 5%;
+     z-index: -1;
+}
+  
+  /*Gallery*/
+  
+.aboutGalleryFlexContainer {
+    display: flex;
+    height: 35%;
+    width: 80%;
+    margin-top: 30%;
+    margin-right: 80%
+    /*
+    border: 2px solid red;
+    */
+}
+  
+.flex-child {
+    height: 50%;
+    width: 50%;
+    /*
+    border: 2px solid black;
+    */
+    margin-top: 2%;
+    margin-left: 2%;
+    padding-left: 10%;
+}
+  /* 
+  .flex-child:first-child {
+    
+  
+  } */
+  
+.profileHeader {
+    text-align: center;
+}
+  
+.profileList {
+    list-style-type: none;
+}
+  
+.profilePhoto {
+    margin: 10px;
+    width: 30%;
+    height: 30%;
+}
+  
+.aboutGalleryContainer2 {
+    height: 40%;
+    width: 100%;
+    /*
+    border: 2px solid red;
+    */
+}
+  
+.profileNeil { 
+    height: 18%;
+    width: 18%;
+    /*
+    border: 2px solid black;
+    */
+    margin-top: 2%;
+    margin-left: 10%;
+    padding-bottom: 5%;
+}
+/***End of Neil's Body Css***/
+
+/***Start of Alex's Body Css**/
+
+.header-container{
+    background-size: cover;
+    height: 100px;
+    position: relative;
+    max-width: auto; 
+    margin: 0 auto;
+}
+
+.header-container .content {
+    position: absolute; 
+    text-align: center;
+    bottom: 0; 
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 100%; 
+    padding: 20px; 
+    height: 100%;
+}
+.greenVehicleContainer{
+    display: block;
+    position: relative;
+    margin-left: 1%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+#TeslaInterior{
+    position: relative;
+}
+.GasVsEV, .BestEV{
+    display:flex;
+    flex-direction: row;
+    float: left;
+    position: relative;
+    top: 15px;
+    margin: 0 1.5%;
+    width: 60%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#GasVsEVpic{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+#TeslaModel3{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+#PorscheTaycan{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+#FordMustang{
+    max-width: 100%;
+    max-height: 100%;
+    display: block; 
+}
+.GasVsEV {
+    border: 2px solid #53a3ee;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow-wrap: break-word;
+    padding:20px;
+}
+#InspoQuote {
+    text-align: center;
+}
+#calculator{
+    width:30%;
+    position:absolute;
+    top: 20px;
+    right: 0;
+    float:right;
+    border: 2px solid #53a3ee;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow-wrap: break-word;
+    padding:20px;
+}
+.BestEV{
+    border: 2px solid #53a3ee;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow-wrap: break-word;
+    padding:20px;
+ }
+/***End of Alex's Body Css***/
+
+/***Start of Darsh's Body Css***/
+.main-container, .main-wrapper-clearfix{
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 1%;
+    height: auto;
+
+}
+
+#DNLogin {
+    margin-top: 70px;
+    float: left; 
+    border: solid 3px black;
+    border-radius: 20px;
+    padding: 17px;
+    padding-left: 30px;
+    padding-right: 150px;
+    border-color: black;
+    color : royalblue; 
+}
+.DNinput  {
+    border: solid 3px black;
+    padding: 20px 70px;
+    text-decoration: none;
+    margin: 10px 8px;
+}
+.DNbutton {
+    color: black;
+    background-color: rgb(245, 245, 245);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Bebas Neue', 'Serif';
+    font-size: 2vh;
+    font-weight: bold;
+    margin: 3px 2px;
+    transition-duration: 0.5s; 
+    cursor: pointer;
+}
+.DNbutton:hover {
+    background-color: royalblue;  
+    color: whitesmoke; 
+}
+#InspoQuote{
+    margin-top: 70px;
+    margin-left: 647px;
+    margin-right: 52px;
+    box-sizing: border-box;
+    border-top-right-radius: 20px;
+    background-color: #53a3ee;
+    font-weight: bold;
+    font-style: italic;
+}
+.regSide{
+    max-height: auto;
+    border-bottom-left-radius: 20px;
+    margin-left: auto;
+    text-align: justify;
+    padding: 20px;
+    float: right;
+    font-size: medium;
+    font-weight: bold;
+    color: whitesmoke;
+    background-color: royalblue;
+}
+#mapid { 
+    height: 740px; 
+} 
+.EnquiriesBtn{
+    box-sizing: border-box;
+    margin: 4px;
+    background-color: #53a3ee;
+}
+/* Picture setting */
+#picSetting{
+    display:flex;
+    padding :3px,200px;
+    justify-content: center;
+    align-items: center;
+}
+#picSetting::before{
+    content : "";
+    position:absolute;
+    background: url('Pics/wallpaper-Hyundai-electric-car.jpg') no-repeat center center/cover;
+    height :90%;
+    width :100%;
+    z-index: -1;
+    opacity :0.89;
+}
+#picSetting1{
+    display:flex;
+    padding :3px,200px;
+    justify-content: center;
+    align-items: center;
+}
+#picSetting1::before{
+    content : "";
+    position:absolute;
+    background: url('Pics/825860.jpg') no-repeat center center/cover;
+    height :90%;
+    width :100%;
+    z-index: -1;
+    opacity :0.89;
+}
+#shakey{
+    color: black;
+    background-color: rgb(245, 245, 245);
+}
+#CBtn{
+    color: black;
+    background-color: rgb(245, 245, 245);
+    
+    margin: 10px;
+    text-align: center;
+}
+#EBtn{
+    color: black;
+    background-color: rgb(245, 245, 245);
+    margin: 10px;
+    text-align: center;
+}
+.Dbutton:hover {
+    background-color: royalblue;  
+    color: whitesmoke; 
+}
+.formdesign {
+    font-size: 20px;
+}
+.formdesign input {
+    width: 50%;
+    padding: 12px 20px;
+    border: 1px solid blue;
+    margin: 14px;
+    border-radius: 4px;
+    font-size: 15px;
+}
+.formerror {
+    color: red;
+}
+.but {
+    border-radius: 9px;
+    width: 100px;
+    height: 50px;
+    font-size: 25px;
+    margin: 22px 20px;
+}
+/***End of Darsh's Body Css***/
+      
+/*---Start of footer design---*/
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin-top: 5px;
+    font-size: 20px;
+}
+  
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+footer *{
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin:auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+ul{
+    list-style: none;
+}
+.footer{
+    position:absolute;
+    width: 100%;
+    background-color: black;
+    padding: 60px 0;
+}
+.footer-col{
+   width: 25%;
+   padding: 0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+}
+.footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #e91e63;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+    color: #bbbbbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover{
+    color: #ffffff;
+    padding-left: 8px;
+}
+.footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+}
+.footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+/*responsive*/
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+    }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+    }
+}
+
+/*End of footer design*/

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Account</title>
+     <!--Common Head for All Pages-->
+    <%- include('./partial/head') %>
+    
+  </head>
+  <header>  
+     <!--Common Header for All Pages-->
+    <%- include('./partial/header') %>
+  </header>
+  <body>
+    <!--Main Body for Login Page-->
+    <div class="main-container">
+        <!--Breadcrumbs to help navigate to previous page-->
+        <div class="breadcrumb">
+            <a href="/">Home</a> >
+            <a href="/Login">Login</a>
+        </div>
+        <div class="main wrapper clearfix">
+
+            <!-- left section for Login Details -->
+            <article>
+                <h1>MEMBER'S LOGIN</h1>
+                <p>If you have an account, sign in with your email address</p> <br>
+
+                <!-- Ask Member for login details -->
+                <fieldset id="DNLogin">
+                    <form action="/Validatelogin" method="POST">
+                        <label class="DNlabel" for="email">Email : </label> <br>
+                        <input class="DNinput" type="text" id="email" name="email" placeholder="Your Email..."> <br>
+                        <br>
+                        <label class="DNlabel" for="password">Password : </label> <br>
+                        <input class="DNinput" type="password" id="password" name="password"
+                            placeholder="Your Password..."> <br> <br>
+
+                            <input class="DNbutton" type="submit" value="SIGN IN">
+                        <!--<a href="#" class="DNbutton">SIGN IN</a>  -->
+                    </form>
+
+                    <!-- Code changes for next version for Validation of form entries -->
+                    <!-- Code in comments as this is intended to used later for next submission -->
+                    <!-- <form  name="myForm" onsubmit="return validateForm()" method="post" >
+                        action="http://www.javatpoint.com/javascriptpages/valid.jsp" -->
+                        <!-- <div class="formdesign" id="email">
+                            Email: <input type="email" name="femail" required><b><span class="formerror"> </span></b>
+                        </div>
+                
+                                   
+                        <div class="formdesign" id="pass">
+                            Password: <input type="password" name="fpass" required><b><span class="formerror"></span></b>
+                        </div>
+                
+                
+                        <input class="DNbutton" type="submit" value="SIGN IN">
+                
+                    </form> --> 
+                </fieldset>
+
+                <!--<h3 id = "InspoQuote">Be a part of Future Transport</h3>  -->
+
+            </article>
+
+            <!--Right section for Login page - Aside starts here -->
+            <aside class = "regSide" > 
+                <br>
+                <h1 id = "RegH1">REGISTER</h1> <br><br>
+
+                <!-- Display benefits of being memeber to the EcoMission Community -->
+                <h3 id= "membenefits"> Members receive more. Unlock more exclusive benefits when you join.</h3> <br> <br>
+                <p>* Exclusive access to new Ev deals </p> <br>
+                <p>* Wide Selection of ev fleet</p> <br>
+                <p>* Invites to member exclusive events</p> <br>
+                <p>* Be the first to know the latest trends</p><br> <br>
+                <!-- Link to Register page -->
+                <a href="/Register" class="DNbutton">Register Now</a>
+
+            </aside> <!-- Aside  part ends here -->
+
+        </div> <!-- #main -->
+    </div> <!-- #main-container -->
+
+    
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/Login.js"></script>
+
+    
+  </body>
+   <!--Common Footer for All Pages-->
+  <footer class = "footer">
+    <%- include('./partial/footer') %>
+  </footer> 
+</html>

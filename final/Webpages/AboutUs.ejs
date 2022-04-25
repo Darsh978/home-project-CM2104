@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eco-Mession</title>
+    <%- include('./partial/head') %>
+  </head>
+  <header>
+    <%- include('./partial/header') %>   
+  </header>
+  <body>
+    <div class="breadcrumb">
+        <a href="/">Home</a> >
+        <a href="/AboutUs">About Us</a>
+    </div>
+<!--start of main content on AboutUs.html -->
+
+    <div id = "textBoxAbout">
+        <center>
+            <h1>ECO Mission</h1>
+            <p>Eco Mission is a dynamic web application. This web app is a group project for the class Dynamic Web Development (CM2104). This group has 4 members - Darsh, Fatima, Alex and Neil.
+            Eco Mission provides information on eco-friendly transport in the UK. It has an interactive map of car emissions where you live, shows the best low emission cars in your area, and electric car charging points near you. It allows you to chat with the rest of the community on the app who are interested in green vehicles, allowing you to get feedback and advice about which green vehicle is the best for you.</p>
+        </center>
+    </div>
+
+    <!--The image links will need to be changed as on github the images are in a folder-->
+
+    <!--<img id = "aboutMainImageID" src="images/aboutMainImage.jpg">-->
+
+
+    <div class="aboutGalleryFlexContainer">
+
+        <div class="flex-child Alex">
+            <h2 class="profileHeader">Alex</h2>
+            <hr>
+            <!--The image links will need to be changed as on github the images are in a folder-->
+            <center><img class="profilePhoto" src="Pics/blankProfilePic.png"/></center>
+            <ul class="profileList">
+            <li>Student at RGU</li>
+            <li>E-mail: a.bogoev@rgu.ac.uk </li>
+            </ul>
+        </div>
+
+        <div class="flex-child Darsh">
+            <h2 class="profileHeader">Darsh</h2>
+            <hr>
+            <!--The image links will need to be changed as on github the images are in a folder-->
+            <center><img class="profilePhoto" src="Pics/blankProfilePic.png"/></center>
+            <ul class="profileList">
+            <li>Student at RGU</li>
+            <li>E-mail: d.narain@rgu.ac.uk</li>
+            </ul>
+        </div>
+
+
+        <div class="flex-child Patty"> 
+            <h2 class="profileHeader">Patty</h2>
+            <hr>
+            <!--The image links will need to be changed as on github the images are in a folder-->
+            <center><img class="profilePhoto" src="Pics/blankProfilePic.png"/></center>
+            <ul class="profileList">
+            <li>Student at RGU</li>
+            <li>E-mail: f.orellana@rgu.ac.uk</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="aboutGalleryContainer2">
+        <div class="profileNeil">
+            <h2 class="profileHeader">Neil</h2>
+            <hr>
+            <!--The image links will need to be changed as on github the images are in a folder-->
+            <center><img class="profilePhoto" src="Pics/blankProfilePic.png"/></center>
+            <ul class="profileList">
+            <li>Student at RGU</li>
+            <li>E-mail: n.marwick@rgu.ac.uk</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+    <!--end of main content on AboutUs.html -->
+
+
+    <script src="js/EcoScript.js"></script>
+
+
+    </body>
+
+    <!--start of footer-->
+    <footer class="footer">
+        <%- include('./partial/footer') %>
+   </footer>
+
+    <!-- end of footer -->
+</html>

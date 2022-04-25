@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eco-Mession News</title>
+    <%- include('./partial/head') %>
+  </head>
+  <header>  
+    <%- include('./partial/header') %>
+  </header>
+
+  <body>
+    <main>
+
+      <!--Breadcrumbs to help navigate to previous page-->
+      <div class="breadcrumb">
+        <a href="/">Home</a> >
+        <a href="/News">News</a
+      </div>
+      <div class = "MainBody">
+        <h1>Latest Electric Vehicle News</h1>
+        <div class="wrapper">
+          <div class="news">
+            <% articles.forEach(function(articles,index){ %>
+
+            <% if ((typeof articles.url=='object') || (typeof articles.title=='object') || (typeof articles.urlToImage=='object') || (typeof articles.content=='object')){ %>
+            <% } else{ %>
+              <a href="<%- articles.url %>" target="_blank" class="news-box Hover-effect">
+                <img class="NewsImg" src="<%- articles.urlToImage %>" alt="Image">
+                <h3 class ='NewsTitle' ><%- articles.title %></h3>
+                <p><%- articles.content.replace(/<[^>]+>/g, '') %>
+                </p>
+                <br>
+              </a>
+            <% } %>
+            <% }) %>
+          </div>
+        </div>  
+      </div>
+    </main>
+    <script src="js/EcoScript"></script>
+  </body>
+
+  <footer class="footer">
+    <%- include('./partial/footer') %>
+  </footer>   
+</html>       

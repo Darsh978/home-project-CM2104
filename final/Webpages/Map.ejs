@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eco-Mession Map</title>
+    <%- include('./partial/head') %>
+    <!-- Include Leaflet API for map -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <!-- Include Leaflet Plugin for Geolocation -->
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.css" />
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <!-- Include Leaflet Plugin for Search -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol@0.76.0/dist/L.Control.Locate.min.js"></script>
+  </head>
+  <header>  
+    <%- include('./partial/header') %>
+  </header>
+  <body>
+    <main>
+
+      <!--Breadcrumbs to help navigate to previous page-->
+      <div class="breadcrumb">
+       <a href="/">Home</a> >       
+       <a href="/Map">Map</a>
+      </div>
+      <!--Main Body for Map Page-->
+    <div class = "MainBody">
+    <!--<div class="main-container">  -->
+        <div class="main wrapper clearfix">
+
+            <!-- left side for Selection Menu-->
+            <lside>
+
+                <!-- Insert menu here -->
+                <h1>Selection Menu</h3> <br>
+                    <div class="EnquiriesBtn">
+                         <!-- For loading the charging point from API, and adding to the map -->
+                        <button class="Dbutton" id="CBtn">Load Charging Points</button>
+                        <!-- Loading the Carbon Intensity data and displaying the data via a popup on the map -->
+                        <button class="Dbutton" id="EBtn">Get Carbon Intesity</button>
+                      </div>
+            </lside>
+
+            <!-- right side for Selection Menu-->
+            <rside>
+
+                <!--  Interactive Map using Leaflet API -->
+                <h2> Map </h2>
+
+                <div id="mapid"></div>
+
+            </rside>
+
+
+        </div> <!-- #main -->
+    </div> <!-- #main-container -->
+
+      
+
+    </main>
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="js/EcoScript.js"></script>
+
+  </body>
+  
+  <footer class= "footer">
+    <%- include('./partial/footer') %>
+  </footer>   
+</html>       
