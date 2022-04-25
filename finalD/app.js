@@ -81,23 +81,24 @@ app.post('/Validatelogin', function(req, res) {
     var email = req.body.email;
     var password = req.body.password;
   
+    console.log('VL1 - Checking db');
   
-  
-    db.collection('users').findOne({"login.email":email}, function(err, result) {
+    db.collection('users').findOne({"Login.email":email}, function(err, result) {
+      console.log("VL2 -check error"+err);
       if (err) throw err;
   
   
       if(!result){res.redirect('/Login');return}
-      console.log('email ok');
+      console.log('VL3 - email ok');
   
   
   
-      if(result.login.pwd == password){ req.session.loggedin = true;  console.log('Login success !!');res.redirect('/GreenVehicle') }
+      //if(result.login.pwd == password){ req.session.loggedin = true;  console.log('Login success !!');res.redirect('/GreenVehicle') }
       
   
   
   
-      else{console.log('Try again'); res.redirect('/Login')}
+      //else{console.log('Try again'); res.redirect('/Login')}
     });
   });
 
@@ -105,17 +106,17 @@ app.post('/Validatelogin', function(req, res) {
   //Register new users and add to mongo database
   app.post('/adduser', function(req, res) {
     //check we are logged in
-    if(!req.session.loggedin){res.redirect('/Login');return;}
+   // if(!req.session.loggedin){res.redirect('/Login');return;}
   
     //we create the data string from the form components that have been passed in
-  
+ console.log('Step 1: Making Json from Registration Screen');
   var datatostore = {
   "fname":req.body.fname,
   "lname":req.body.lname,
   "email":req.body.email,
-  "password":req.body.pwd}
+  "pwd":req.body.password}
   
-  console.log('About to add user from Registration Screen');
+  console.log('Step 2: About to add user from Registration Screen');
   
   //once created we just run the data string against the database and all our new data will be saved/
     db.collection('users').save(datatostore, function(err, result) {
