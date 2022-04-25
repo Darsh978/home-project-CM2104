@@ -63,6 +63,7 @@ var db;
 MongoClient.connect(url, function(err, database) {
   if (!err) {
     db = database;
+    console.log("Now Connected database eco_data");
   }
   else {
       console.log("Cannot connect to database - error"+err);
@@ -78,7 +79,7 @@ MongoClient.connect(url, function(err, database) {
 app.post('/Validatelogin', function(req, res) {
     console.log(JSON.stringify(req.body))
     var email = req.body.email;
-    var password = req.body.pwd;
+    var password = req.body.password;
   
   
   
@@ -87,14 +88,16 @@ app.post('/Validatelogin', function(req, res) {
   
   
       if(!result){res.redirect('/Login');return}
+      console.log('email ok');
   
   
   
-      if(result.login.password == password){ req.session.loggedin = true; res.redirect('/') }
+      if(result.login.pwd == password){ req.session.loggedin = true;  console.log('Login success !!');res.redirect('/GreenVehicle') }
+      
   
   
   
-      else{res.redirect('/Login')}
+      else{console.log('Try again'); res.redirect('/Login')}
     });
   });
 
@@ -110,8 +113,9 @@ app.post('/Validatelogin', function(req, res) {
   "fname":req.body.fname,
   "lname":req.body.lname,
   "email":req.body.email,
-  "password":req.body.password}
+  "password":req.body.pwd}
   
+  console.log('About to add user from Registration Screen');
   
   //once created we just run the data string against the database and all our new data will be saved/
     db.collection('users').save(datatostore, function(err, result) {
