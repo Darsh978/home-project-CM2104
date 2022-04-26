@@ -83,22 +83,23 @@ app.post('/Validatelogin', function(req, res) {
   
     console.log('VL1 - Checking db');
   
-    db.collection('users').findOne({"Login.email":email}, function(err, result) {
+    db.collection('users').findOne({"email":email}, function(err, result) {
       console.log("VL2 -check error"+err);
       if (err) throw err;
   
   
-      if(!result){res.redirect('/Login');return}
-      console.log('VL3 - email ok');
+      if(!result){console.log('VL3 - no results');res.redirect('/Login');return}
+      console.log('VL4 - email ok');
   
   
   
-      //if(result.login.pwd == password){ req.session.loggedin = true;  console.log('Login success !!');res.redirect('/GreenVehicle') }
-      
+      if(result.pwd == password){ 
+        //req.session.loggedin = true;  
+        console.log('VL5 - Login success !!');
+        res.redirect('/GreenVehicle') }
+       
   
-  
-  
-      //else{console.log('Try again'); res.redirect('/Login')}
+      else{console.log('Try again'); res.redirect('/Login')}
     });
   });
 
